@@ -1,0 +1,10 @@
+language: go
+go:
+      - 1.8
+sudo: false
+
+before_install:
+      - go get -v -u github.com/arthurkiller/brickman/client
+      - go get -v -u github.com/arthurkiller/brickman/server
+script:
+      - PATH=$PATH:$HOME/gopath/bin bash -x ./test.sh
